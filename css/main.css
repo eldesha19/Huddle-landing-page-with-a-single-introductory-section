@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+    --body-font: 'Open Sans', sans-serif;
+    --heading-font: 'Poppins', sans-serif;
+}
+body{
+    background-image: url("images/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-color: var(--Violet);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 1.5rem;
+}
+.holder{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+header{
+    margin-bottom: 1rem;
+}
+header .logo{
+    width: 1300px;
+}
+header .logo img{
+    padding-top: 30px;
+}
+main{
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1300px;
+}
+main .container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+}
+main .container .main-image img{
+    width: 700px;
+    margin-top: 60px;
+}
+.container .info{
+    margin-top: 120px;
+}
+.container .info .title{
+    color: white;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    width: 360px;
+    margin-bottom: 2rem;
+}
+.container .info p{
+    color: white;
+    font-family: var(--body-font);
+    width: 453px;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+.container .info a{
+    text-decoration: none;
+    background-color: white;
+    padding: 10px 40px;
+    font-family: var(--heading-font);
+    border-radius: 2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .7);
+    transition: .5s;
+}
+.container .info a:hover{
+    background-color: var(--Soft-Magenta);
+    color: white;
+}
+.social-media{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: .5rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 2.5rem;
+    margin-top: 0.6rem;
+    align-items: center;
+    gap: 2.5rem;
+}
+.social-media .media-icon {
+    align-items: center;
+    width: 1rem;
+    height: 3rem;
+  }
+.social-media .fab {
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    border: 1px solid white;
+    color: white;
+    width: 2.5rem;
+    text-align: center;
+    transition: .5s;
+}
+.social-media .fab:hover{
+    color: var(--Soft-Magenta);
+    border-color: var(--Soft-Magenta);
+    cursor: pointer;
+}
+footer p span{
+    color: white;
+}
+footer p a{
+    color: var(--Soft-Magenta);
+}
+@media (max-width: 425px){
+    body{
+        background-image: url("images/bg-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    header .logo{
+        width: 300px;
+    }
+    main{
+        width: 300px;
+    }
+    .container{
+        flex-direction: column;
+        max-width: 100%;
+    }
+    main .container .main-image{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+    main .container .main-image img{
+        width: 310px;
+        margin-bottom: 1rem;
+    }
+    .container .info{
+        margin-top: 45px;
+    }
+    .container .info .title{
+        text-align: center;
+        width: fit-content;
+        font-size: 25px;
+    }
+    .container .info p{
+        text-align: center;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .container .info a{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-bottom: 6rem;
+        width: 200px;
+    }
+    .social-media{
+        justify-content: center;
+        padding: 20px;
+    }
+}
